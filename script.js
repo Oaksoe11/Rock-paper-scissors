@@ -44,15 +44,6 @@ function playRound(computerSelection, humanSelection ) {
             }
 }
 
-function playGame(){
-    for (let i = 0; i < 5; i++){
-        let computerSelection = getComputerChoice();
-        let humanSelection = getHumanChoice();
-        playRound(computerSelection, humanSelection);
-    };
-    console.log(`Your score is ${humanScore}`);
-    console.log(`Computer score is ${computerScore}`);
-}
 
 
 playGame();
