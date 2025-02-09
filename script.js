@@ -22,10 +22,15 @@ function getComputerChoice(){
 let humanScore = 0;
 let computerScore = 0;
 const messageBox = document.getElementById("message");
+const score = document.getElementById("score");
 
 function playRound(humanSelection ) {
-    if (humanScore == 5 || computerScore == 5) { return;};
-    
+    if  (humanScore == 5 ) { 
+        score.textContent = (`GAME OVER! You score 5 times!!!`);
+    }else{
+        score.textContent = (`GAME OVER! Computer score 5 times!`);
+    };
+
     const computerSelection = getComputerChoice();
 
     console.log(`Your choice is ${humanSelection}`);
@@ -48,7 +53,6 @@ function playRound(humanSelection ) {
                 humanScore++;
             }
     
-    const score = document.getElementById("score");
     score.textContent = `Your score is ${humanScore} and computer score is ${computerScore}`;
     
 }
