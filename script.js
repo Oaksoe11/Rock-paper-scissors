@@ -27,8 +27,10 @@ const score = document.getElementById("score");
 function playRound(humanSelection ) {
     if  (humanScore == 5 ) { 
         score.textContent = (`GAME OVER! You score 5 times!!!`);
-    }else{
+        return "";
+    }else if (computerScore == 5){
         score.textContent = (`GAME OVER! Computer score 5 times!`);
+        return "";
     };
 
     const computerSelection = getComputerChoice();
