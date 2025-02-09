@@ -24,6 +24,8 @@ let computerScore = 0;
 const messageBox = document.getElementById("message");
 
 function playRound(humanSelection ) {
+    if (humanScore == 5 || computerScore == 5) { return;};
+    
     const computerSelection = getComputerChoice();
 
     console.log(`Your choice is ${humanSelection}`);
@@ -46,6 +48,9 @@ function playRound(humanSelection ) {
                 humanScore++;
             }
     
+    const score = document.getElementById("score");
+    score.textContent = `Your score is ${humanScore} and computer score is ${computerScore}`;
+    
 }
 
 
@@ -53,8 +58,13 @@ const rock = document.getElementById("Rock");
 const paper = document.getElementById("Paper");
 const scissors = document.getElementById("Scissors");
 
+let event = 0;
+
 rock.addEventListener("click", () => {playRound("Rock");});
 paper.addEventListener("click", () => {playRound("Paper");});
 scissors.addEventListener("click", () => {playRound("Scissors");});
+    
+
+
 
 
