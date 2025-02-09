@@ -69,6 +69,14 @@ let event = 0;
 rock.addEventListener("click", () => {playRound("Rock");});
 paper.addEventListener("click", () => {playRound("Paper");});
 scissors.addEventListener("click", () => {playRound("Scissors");});
+
+const reset = document.getElementById("reset");
+reset.addEventListener("click", () => {
+    humanScore = 0;
+    computerScore = 0;
+    message.textContent = ("Game is RESET.");
+    score.textContent = ("Current Score");
+})
     
 
 
