@@ -1,0 +1,27 @@
+#messageBox{
+    background-color: royalblue;
+
+}
+
+#btns{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 20px;
+}
+
+#btns button{
+    width: 100px;
+    height: 80px;
+    border-radius: 10px;
+    font-size: 40px;
+    color: white;
+    border-color: rgba(35, 149, 241, 0.728);
+    background-color: rgba(35, 149, 241, 0.728);
+    
+}
+
+#btns button:hover{
+    background-color: royalblue;
+    border-color: royalblue;
+}
